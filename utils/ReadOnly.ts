@@ -34,3 +34,19 @@ console.log(pessoa.nome); // Saída: Maria
 
 // Não é possível modificar propriedades de um objeto readonly
 // pessoa.nome = "João"; // Isso resultaria em um erro de compilação
+
+
+interface Tarefa {
+  readonly id: number;
+  title: string;
+}
+
+let tarefa1: Tarefa = {
+  id: 1,
+  title: "Fazer compras"
+}
+
+//tarefa1.id = 2; // erro!
+
+console.log(tarefa1.id);// saida: 1
+
