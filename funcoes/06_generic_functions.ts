@@ -18,3 +18,16 @@ const Object_test = {
 }
 
 Log(Object_test)
+
+
+
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key]
+}
+
+const objUser = {
+  nome: 'userName',
+  idade: 23
+}
+
+console.log(getProperty(objUser, 'nome'))
